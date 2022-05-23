@@ -1,0 +1,8 @@
+.SignInButton {
+    width: 100%;
+}
+
+Button {
+    width: 70%;
+    border-radius: 25px;
+}

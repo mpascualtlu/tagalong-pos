@@ -1,0 +1,14 @@
+.DatePicker {
+    padding: 20px 0px;
+}
+
+.datepicker-body {
+    display: flex;
+}
+
+.datepicker-label {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
