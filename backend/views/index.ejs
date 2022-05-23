@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+<html lang="en">
+  <%- include ("./include/head") %>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%- include ("./include/nav") %>
+
+    <section>
+      <div class="hero-container">
+        <img src="/images/heroImage.jpg" alt="People jumping on the snow" width="100%">
+        <div class="centered">
+          <h1>Breathe. Smile. Repeat</h1>
+          <div class="btn-container">
+            <a href="./views/Hostels.html"><button type="button" class="btn btn-primary">Hostels</button></a> 
+          </div>
+          <div class="btn-container">
+              <a href=""><button type="button" class="btn btn-success">Trips</button></a> 
+          </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>

@@ -7,7 +7,6 @@ body {
     background-color: #ebebeb;
 }
 
-
 .nav-container {
     display: flex;
     justify-content: center;
@@ -21,13 +20,11 @@ body {
     color: azure;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-  }
+}
 
-  .hero-container {
+.hero-container {
     position: relative;
     text-align: center;
-
-    
 }
 
 .centered {
@@ -43,7 +40,6 @@ h1 {
     font-weight: 700;
     border: 2px;
     border-color: black; 
-    
 }
 
 h2 {
@@ -72,9 +68,9 @@ h4 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 .btn-container {
     margin-top: 5%;
-
 }
 
 .btn1 {
@@ -131,36 +127,35 @@ h4 {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
 
-  p {
-      font-size: 1.5em;
-      margin-top: 20px;
-      margin-bottom: 10px;
-  }
+p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 
-  .btn-whiteBorder {
-      border-radius: 25px;
-      block-size: auto;
-      background-color: #47b5c300;
-      padding: 12px;
-      margin-top: 10px;
-  }
+.btn-whiteBorder {
+    border-radius: 25px;
+    block-size: auto;
+    background-color: #47b5c300;
+    padding: 12px;
+    margin-top: 10px;
+}
 
-  .btn-whiteBorder-font {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 700;
-      color: #fafafa;
-  }
+.btn-whiteBorder-font {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #fafafa;
+}
 
-  .container-items {
-      background-color: #f7f7f7;
-      padding: 20px;
-      border-radius: 15px;
-      
-  }
+.container-items {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+}
 
-  .container-itemsList {
+.container-itemsList {
     border: 3px;
     border-radius: 25px;
     block-size: auto;
@@ -168,12 +163,12 @@ h4 {
     padding: 12px;
     margin-top: 10px;
     border-color: #47B4C3;
-  }
+}
 
-  .black-container {
+.black-container {
     background-color: #484848;
     padding: 20px;
     border-radius: 15px;
     margin: 5%;
-  }
+}
 

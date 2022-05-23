@@ -1,20 +1,18 @@
-const mysql = require('mysql');
-const dbConfig = require('../config/db.config');
+const mysql = require('mysql2');
 
-const connection = mysql.createPool({
-  host: dbConfig.HOST,
-  port: dbConfig.PORT,
-  user: dbConfig.USER,
-  password: dbConfig.PASSWORD,
-  database: dbConfig.DB
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  database: 'tagalong-pos',
+  port: 3036
 }); 
 
-connection.getConnection(function(error) {
-  if (!!error) {
-    console.log("Database error: ", error);
-  } else {
-    console.log("Connected!")
+connection.connect(function(error){
+  if(!!error){
+    console.log(error);
+  }else{
+    console.log('Connected!:)');
   }
 });
 
-module.exports = connection;
+module.exports = connection; 
