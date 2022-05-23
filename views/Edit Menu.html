@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Users</title>
+    <title>Edit Menu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
   </head>
@@ -38,59 +38,50 @@
         
       
         <div class="container-sm col-md-8" style="padding: 45px;">
-          <h1>Add Users</h1>
+          <h1>Add Dish</h1>
 
         <div class="mb-4 row">
-          <label class="col-sm-3 col-form-label" style="font-weight: 700;">First Name</label>
+          <label class="col-sm-3 col-form-label" style="font-weight: 700;">Dish Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="f_name">
+            <input type="text" class="form-control" id="c_name">
           </div>
         </div>
 
         <div class="mb-4 row">
-          <label for="staticEmail" class="col-sm-3 col-form-label" style="font-weight: 700;">Last Name</label>
+          <label  class="col-sm-3 col-form-label" style="font-weight: 700;">Description</label>
           <div class="col-sm-10">
             <input type="text" class="form-control" id="l_name">
           </div>
         </div>
 
         <div class="mb-4 row">
-          <label  class="col-sm-3 col-form-label" style="font-weight: 700;">Email</label>
+          <label class="col-sm-3 col-form-label" style="font-weight: 700;">Price</label>
           <div class="col-sm-10">
-            <input type="password" class="form-control" id="password">
+            <input type="text" class="form-control" id="l_name">
           </div>
         </div>
-
-        
 
         <div class="mb-4 row">
-          <label for="inputPassword" class="col-sm-3 col-form-label" style="font-weight: 700 ;">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword">
+          <label class="col-sm-3 col-form-label" style="font-weight: 700;">Location</label>
+          <div class="mb-3 row">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label">
+                <span style="font-weight: 700 ;">The Travel Cafe</span>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label">
+                <span style="font-weight: 700 ;">Tag Along 2.0</span>
+              </label>
+            </div>
+            
           </div>
         </div>
+        
 
-        <div class="mb-3 row">
-          <label class="col-sm-3 col-form-label" style="font-weight: 700;">User Roles</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label">
-              <span style="font-weight: 700 ;">Customer</span>
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label">
-              <span style="font-weight: 700 ;">Manager</span>
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label">
-              <span style="font-weight: 700 ;">Cashier</span>
-            </label>
-          </div>
-        </div>
+        
 
         <div class="btn-container">
           <a href="./AdminHome.html"><button type="button" class="btn btn-success">Add</button></a>
@@ -101,18 +92,16 @@
 
     <section>
       <div class="container container-sm col-md-8">
-        <div class="row ">
-          <div class="col">
            <div class="container-items">
-            <h2>Customers</h2>
+            <h2>The Travel Cafe</h2>
 
             <div class="container-itemsList">
               <div class="row ">
                 <div class="col">
-                  <span style="font-weight: 700 ;">Anika Amardeep</span>
+                  <span style="font-weight: 700 ;">Vegan Pizza</span>
                 </div>
                 <div class="col">
-                  <span>anika@gmail.com</span> 
+                  <span>100 INR</span> 
                 </div>
                 <div class="col">
                   <button type="button" class="btn btn-dark">Edit</button> 
@@ -122,10 +111,10 @@
               <div class="container-itemsList">
                 <div class="row ">
                   <div class="col">
-                    <span style="font-weight: 700 ;">Arushi Fathima</span>
+                    <span style="font-weight: 700 ;">Falafal Wrap</span>
                   </div>
                   <div class="col">
-                    <span>arushi@gmail.com</span> 
+                    <span>200 INR</span> 
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-dark">Edit</button> 
@@ -135,17 +124,15 @@
                 <div class="container-itemsList">
                   <div class="row ">
                     <div class="col">
-                      <span style="font-weight: 700 ;">Chand Varsha</span>
+                      <span style="font-weight: 700 ;">Spinach Juice</span>
                     </div>
                     <div class="col">
-                      <span>chand@gmail.com</span> 
+                      <span>50 INR</span> 
                     </div>
                     <div class="col">
                       <button type="button" class="btn btn-dark">Edit</button> 
                     </div>
                   </div>
-
-              
             </div>
            </div>
           </div>
@@ -154,18 +141,16 @@
 
     <section>
       <div class="container container-sm col-md-8">
-        <div class="row ">
-          <div class="col">
            <div class="container-items">
-            <h2>Cashiers</h2>
+            <h2>Tag Along 2.0</h2>
 
             <div class="container-itemsList">
               <div class="row ">
                 <div class="col">
-                  <span style="font-weight: 700 ;">Saran Singh</span>
+                  <span style="font-weight: 700 ;">Veg Momo</span>
                 </div>
                 <div class="col">
-                  <span>saran@gmail.com</span> 
+                  <span>150 INR</span> 
                 </div>
                 <div class="col">
                   <button type="button" class="btn btn-dark">Edit</button> 
@@ -175,21 +160,32 @@
               <div class="container-itemsList">
                 <div class="row ">
                   <div class="col">
-                    <span style="font-weight: 700 ;">Bhavana Sharma</span>
+                    <span style="font-weight: 700 ;">Veg Thukpa</span>
                   </div>
                   <div class="col">
-                    <span>bhavana@gmail.com</span> 
+                    <span>200 INR</span> 
                   </div>
                   <div class="col">
                     <button type="button" class="btn btn-dark">Edit</button> 
                   </div>
                 </div>
+
+                <div class="container-itemsList">
+                  <div class="row ">
+                    <div class="col">
+                      <span style="font-weight: 700 ;">Veg Pasta</span>
+                    </div>
+                    <div class="col">
+                      <span>50 INR</span> 
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-dark">Edit</button> 
+                    </div>
+                  </div>
             </div>
            </div>
           </div>
     </section>
 
-
-	
   </body>
 </html>
