@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const connection = require('../lib/db');
-const { signupValidation, loginValidation } = require('../auth/validation');
-const dbConfig = require('../config/db.config');
 const bcrypt = require('bcryptjs');
 const { check } = require('express-validator');
 const jwt = require('jsonwebtoken');
@@ -110,7 +108,10 @@ router.post('/register', [
   })
 })
 
-router.post('/get-user', signupValidation, (req, res, next) => {
+router.post('/get-user', [
+  check('email', 'Please include a valid email').isEmail().normalizeEmail({ gmail_remove_dots: true }),
+  check('password', 'Password must contain six or more characters').isLength({ min: 6 })
+], (req, res, next) => {
   if(
     !req.headers.authorization ||
     !req.headers.authorization.startsWith('Bearer') ||
