@@ -5,6 +5,7 @@ section {
 
 body {
     background-color: #ebebeb;
+    justify-content: center;
 }
 
 
@@ -53,6 +54,7 @@ h2 {
     border-color: black; 
     margin-bottom: 10px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 h3 {
@@ -157,6 +159,8 @@ h4 {
       background-color: #f7f7f7;
       padding: 20px;
       border-radius: 15px;
+      justify-content: center;
+      align-items: center;
       
   }
 
@@ -168,6 +172,8 @@ h4 {
     padding: 12px;
     margin-top: 10px;
     border-color: #47B4C3;
+    justify-content: center;
+    align-items: center;
   }
 
   .black-container {
