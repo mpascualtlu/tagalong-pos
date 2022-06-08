@@ -78,33 +78,34 @@ router.post('/register', [
   })    
 ], (req, res) => {
   connection.query(`SELECT * FROM users WHERE LOWER(email) = ${connection.escape(req.body.email)};`, (err, result) => {
-    if (result.length) {
-      return res.status(409).send({
-        msg: 'This user is already in use!'
-      });
-    } else {
-      bcrypt.hash(req.body.password, 10, (err, hash) => {
-        if (err) {
-          return res.status(500).send({
-            msg: err
-          })
-        } else {
-          connection.query(`INSERT INTO users (first_name, last_name, email, password) 
-            VALUES ('${req.body.last_name}', '${req.body.last_name},
-            ${connection.escape(req.body.email)}, ${connection.escape(hash)})`,
-          (err, result => {
-            if (err) {
-              return res.status(400).send({
-                msg: err
-              });
-            }
-            return res.status(201).send({
-              msg: 'We have registered this user!'
-            });
-          }))
-        }
-      })
-    }
+    console.log("Woah nelly: ", err);
+  //   if (result.length) {
+  //     return res.status(409).send({
+  //       msg: 'This user is already in use!'
+  //     });
+  //   } else {
+  //     bcrypt.hash(req.body.password, 10, (err, hash) => {
+  //       if (err) {
+  //         return res.status(500).send({
+  //           msg: err
+  //         })
+  //       } else {
+  //         connection.query(`INSERT INTO users (first_name, last_name, email, password) 
+  //           VALUES ('${req.body.last_name}', '${req.body.last_name},
+  //           ${connection.escape(req.body.email)}, ${connection.escape(hash)})`,
+  //         (err, result => {
+  //           if (err) {
+  //             return res.status(400).send({
+  //               msg: err
+  //             });
+  //           }
+  //           return res.status(201).send({
+  //             msg: 'We have registered this user!'
+  //           });
+  //         }))
+  //       }
+  //     })
+  //   }
   })
 })
 
