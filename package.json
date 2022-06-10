@@ -4,6 +4,9 @@
   "description": "This README would normally document whatever steps are necessary to get your application up and running.",
   "main": "index.js",
   "scripts": {
+    "client": "npm run start --prefix client",
+    "server": "npm run start --prefix server",
+    "watch": "npm run server & npm run client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

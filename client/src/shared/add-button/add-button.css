@@ -1,0 +1,6 @@
+.AddButton > Button {
+    color: white;
+    border-radius: 25px;
+    width: 60%;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.Header {
+    background-color: #52B5C3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Options > .col {
+    cursor: pointer;
+}
+
+.logo {
+    height: 40px;
+}
