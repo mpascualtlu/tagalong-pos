@@ -1,0 +1,34 @@
+.SignIn {
+    background-color: #EBEBEB;
+    height: 100%;
+}
+
+.LargeText {
+    height: 3em;
+}
+
+.sign-in-form {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sign-in-form > form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+Form.Group {
+    margin: 10px;
+}
+
+.justSignIn {
+    background-color: #52B5C3;
+}
+
+.registerButton {
+    background-color: #DBF53E;
+    color: #464646;
+}

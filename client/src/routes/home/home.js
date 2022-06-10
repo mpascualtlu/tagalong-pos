@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './home.css';
 import DisplaySection from '../../shared/display-section/display-section';
 import { Container, Row, Col } from 'react-bootstrap';

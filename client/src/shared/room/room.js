@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './room.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import AddButton from '../add-button/add-button';

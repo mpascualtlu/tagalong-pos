@@ -1,12 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './hostels.css';
 import DisplaySection from '../../shared/display-section/display-section';
 import BufferText from '../../shared/buffer-text/buffer-text';
 import Room from '../../shared/room/room';
 import DatePicker from '../../shared/datepicker/datepicker';
 import { useNavigate } from 'react-router-dom';
-
-const useMountEffect = fun => useEffect(fun, []);
 
 const Hostels = () => {
     const [checkInDate, changeCheckInDate ] = useState(null);
@@ -72,7 +70,7 @@ const Hostels = () => {
     const updateOrder = (num, room) => {
         if (num) {
             const newOrder = {
-                hostelName: hostels.filter(hostel => hostel.id == room.hostelId)[0].name,
+                hostelName: hostels.filter(hostel => hostel.id === room.hostelId)[0].name,
                 roomName: room.roomName,
                 roomDescription: room.description,
                 numOfBeds: num
@@ -105,7 +103,7 @@ const Hostels = () => {
             />
             <div>
                 { hostels.map((hostel) => (
-                    <div key={hostel.id} ref={hostel.id == 1 ? myRef : null}>
+                    <div key={hostel.id} ref={hostel.id === 1 ? myRef : null}>
                         <BufferText
                             header={hostel.name}
                             text={hostel.description}

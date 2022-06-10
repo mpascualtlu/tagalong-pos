@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './large-text.css';
 
-class LargeText extends Component {
-    render() {
-        return (
+const LargeText = (props) => {
+    return (
+        <div>
             <div className="LargeText">
-                { this.props.text }
+                { props.text }
             </div>
-        )
-    }
+            { props.progress }
+        </div>
+    )
 } 
 
 export default LargeText;

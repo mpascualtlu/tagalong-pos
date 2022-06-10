@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {useLocation} from 'react-router-dom';
-import EncourageButton from '../../shared/encourage-button/button';
+// import EncourageButton from '../../shared/encourage-button/button';
 import './review.css';
 import { useNavigate } from 'react-router-dom';
 import AddButton from '../../shared/add-button/add-button';
