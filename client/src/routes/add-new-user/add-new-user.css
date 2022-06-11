@@ -1,0 +1,22 @@
+.new-user-form-container {
+    padding: 45px;
+}
+
+.add-new-user-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-field > label {
+    font-weight: 700;
+}
+
+select.form-control {
+    -webkit-appearance: menulist;
+}

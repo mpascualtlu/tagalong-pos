@@ -1,0 +1,80 @@
+.hostel-container {
+    position: relative;
+    text-align: center;
+    background-color: #47B4C3;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.hostel-container > h1 {
+    font-size: 3em;
+    font-weight: 700;
+    border: 2px;
+    border-color: black;
+}
+
+.btn-whiteBorder {
+    border-radius: 25px!important;
+    background-color: #47B4C3!important;
+    padding: 12px!important;
+    margin-top: 10px!important;
+    color: white;
+    border: 2px solid white!important;
+    font-weight: 700;
+}
+
+.container-items {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.checkin-container {
+    margin-top: 5%;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.checkin-container > h2 {
+    font-size: 2em;
+    font-weight: 700;
+    border: 2px;
+    border-color: black;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+}
+
+.container-itemsList {
+    border: 3px;
+    border-radius: 25px;
+    block-size: auto;
+    background-color: #ffffff;
+    padding: 12px;
+    margin-top: 10px;
+    border-color: #47B4C3;
+}
+
+.hostel-income-container {
+    margin-top: 20px;
+}
+
+.black-container {
+    background-color: #484848;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 5%;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.btn-container {
+    margin-top: 5%;
+}
+
+.btn-container > button {
+    width: unset;
+}

@@ -9,6 +9,7 @@ import Confirm from './routes/confirm/confirm';
 import SignIn from './routes/sign-in/sign-in';
 import Register from './routes/register/register';
 import AdminHome from './routes/admin-home/admin-home';
+import AddNewUser from './routes/add-new-user/add-new-user';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="review" element={<Review/>}></Route>
         <Route path="confirm" element={<Confirm/>}></Route>
         <Route path="admin-home" element={<AdminHome/>}></Route>
+        <Route path="add-new-user" element={<AddNewUser/>}></Route>
       </Routes>
     </div>
   );

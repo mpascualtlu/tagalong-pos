@@ -8,32 +8,26 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
 const SignIn = () => {
-
     const { register, handleSubmit, errors } = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = async (data, e) => {
-        console.log("Data: ", data);
-        await fetch('http://localhost:4000/users/authenticate', {
+        const response = await fetch('http://localhost:4000/users/authenticate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data)
         })
-        .then(res => {
-            res.json();
-            console.log(res);
-            navigate('/admin-home');
-        })
-        .catch(err => console.log("This error: ", err));
+        const content = await response.json();
+        sessionStorage.setItem('token', content.token);
+        navigate('/admin-home');
     }
 
     const onErrors = (errors, e) => {
         console.log("Errors: ", errors);
         console.log("E: ", e);
     }
-
-    const navigate = useNavigate();
 
     return (
         <div className="SignIn">

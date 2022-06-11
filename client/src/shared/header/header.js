@@ -12,7 +12,7 @@ const Header = () => {
             <Row>
                 <Col>
                     <Row>
-                        <Col xs={2}>
+                        <Col>
                             <img
                                 src={ companyLogo }
                                 alt="Tag Along"
