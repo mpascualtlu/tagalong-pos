@@ -40,8 +40,6 @@ async function create(params) {
         params.hash = await bcrypt.hash(params.password, 10);
     }
 
-    console.log("Params: " + JSON.stringify(params));
-
     await db.User.create(params);
 }
 

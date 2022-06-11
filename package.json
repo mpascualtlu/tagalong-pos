@@ -9,6 +9,7 @@
     "watch": "npm run server & npm run client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "proxy": "http://localhost:4000/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mpascualtlu/tagalong-pos.git"

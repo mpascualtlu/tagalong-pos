@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 const validateRequest = require('middleware/validate-request');
-const authorize = require('middleware/authorize')
+const authorize = require('middleware/authorize');
 const userService = require('./users.service');
-const jwt = require("jsonwebtoken")
 
 // routes
 router.post('/authenticate', authenticateSchema, authenticate);
@@ -55,7 +54,6 @@ function getAll(req, res, next) {
 }
 
 function getCurrent(req, res, next) {
-    console.log("Req: ", req);
     res.json(req.user);
 }
 

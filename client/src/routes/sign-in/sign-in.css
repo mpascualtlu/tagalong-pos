@@ -7,7 +7,7 @@
     height: 3em;
 }
 
-.sign-in-form {
+.sign-in-form-container {
     background-color: white;
     border-radius: 10px;
     width: 80%;
@@ -24,11 +24,23 @@ Form.Group {
     margin: 10px;
 }
 
-.justSignIn {
-    background-color: #52B5C3;
+.form-control {
+    border: 2px solid #77C8D2;
+    border-radius: 25px;
+    padding: 5px;
+    padding-left: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.registerButton {
-    background-color: #DBF53E;
-    color: #464646;
+.btn {
+    width: 100%;
+    border-radius: 50px;
 }
+
+.signin-button {
+    background-color: #52B5C3;
+    color: white;
+}
+
+

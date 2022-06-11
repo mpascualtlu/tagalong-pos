@@ -4,7 +4,6 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('middleware/error-handler');
-const jwt = require('jsonwebtoken');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

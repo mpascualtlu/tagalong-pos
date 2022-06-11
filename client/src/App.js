@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './routes/home/home';
 import Header from './shared/header/header';
@@ -7,6 +8,7 @@ import Review from './routes/review/review';
 import Confirm from './routes/confirm/confirm';
 import SignIn from './routes/sign-in/sign-in';
 import Register from './routes/register/register';
+import AdminHome from './routes/admin-home/admin-home';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="hostels" element={<Hostels/>}></Route>
         <Route path="review" element={<Review/>}></Route>
         <Route path="confirm" element={<Confirm/>}></Route>
+        <Route path="admin-home" element={<AdminHome/>}></Route>
       </Routes>
     </div>
   );
