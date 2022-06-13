@@ -7,7 +7,7 @@ module.exports = db = {};
 initialize();
 
 async function initialize() {
-    const { host, port, user, password, database } = config.database;
+    const { host, user, password, database } = config.database;
     const connection = await mysql.createConnection({ host, user, password, database });
     await connection.query(`CREATE DATABASE IF NOT EXISTS \`${database}\`;`);
 
