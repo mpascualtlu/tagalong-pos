@@ -1,10 +1,9 @@
 {
     "database": {
-        "host": "localhost",
-        "port": 3306,
-        "user": "root",
-        "password": "",
-        "database": "tagalong-pos"
+        "host": "us-cdbr-east-05.cleardb.net",
+        "user": "bd1542658f10e1",
+        "password": "3551dd8b",
+        "database": "heroku_0f023c33e27fbf1"
     },
     "secret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING"
 }
