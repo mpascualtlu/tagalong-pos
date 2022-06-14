@@ -11,7 +11,7 @@ const AddNewUser = () => {
 
     const onSubmit = async (data, e) => {
         console.log("Data: ", data);
-        const response = await fetch('http://localhost:4000/users/register', {
+        const response = await fetch(`http://localhost:4000/users/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

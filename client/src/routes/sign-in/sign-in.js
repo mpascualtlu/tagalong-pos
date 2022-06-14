@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './sign-in.css';
 import LargeText from '../../shared/large-text/large-text';
 
@@ -12,7 +12,7 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     const onSubmit = async (data, e) => {
-        const response = await fetch('http://localhost:4000/users/authenticate', {
+        const response = await fetch(`https://tagalong-pos-db.herokuapp.com/users/authenticate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

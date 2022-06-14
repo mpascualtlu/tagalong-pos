@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const AdminHome = () => {
     const navigate = useNavigate();
-    
+
     const hotels = (
         <Container>
             <Row>

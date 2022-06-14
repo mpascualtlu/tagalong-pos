@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/users', require('./users/users.controller'));
+app.use('/bookings', require('./bookings/bookings.controller'));
 // other controllers go here
 
 app.use(errorHandler);
