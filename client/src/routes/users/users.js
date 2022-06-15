@@ -1,45 +1,43 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import './users.css';
-import { Table } from 'react-bootstrap';
+import { Table, Button, Modal, Form } from 'react-bootstrap';
+
 
 const Users = () => {
-    const [users, getUsers] = useState([]);
     const token = sessionStorage.getItem("token");
+    const [users, setUserList] = useState([]);
+    const navigate = useNavigate();
 
-    const formattedUsers = [];
-
-    const getData = async () => {
+    const getUsers = async () => {
+        setUserList([]);
         const response = await fetch(`https://tagalong-pos-db.herokuapp.com/users`, {
             headers: {
                 Authorization: 'Bearer ' + token,
             },
         });
-        
-        getUsers(await response.json());
-        users.forEach(user => {
-            formattedUsers.push(<tr>
-                <td>{ user.first_name }</td>
-                <td>{ user.last_name }</td>
-                <td>{ user.email }</td>
-                <td>{ user.role }</td>
-            </tr>);
-            console.log("Formatted users: ", formattedUsers);
-        })
+        try {
+            const usersResponse = await response.json();
+            console.log(usersResponse);
+            setUserList(usersResponse);
+        }
+        catch {
+            console.log("Error");
+        }
     }
 
     useEffect(() => {
-        getData();
+        getUsers();
     }, []);
 
-    useEffect(() => {
-        const getData = async () => {
-            const callMyApi = await fetch(`https://tagalong-pos-db.herokuapp.com/users`, {
-                headers: {
-                    Authorization: 'Bearer ' + token,
-                },
-            })
-        }
-    })
+    const deleteUser = async(user) => {
+        const response = await fetch(`https://tagalong-pos-db.herokuapp.com/${user.id}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: 'Bearer ' + token,
+            },
+        });
+    }
 
     return (
         <div>
@@ -51,12 +49,31 @@ const Users = () => {
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Role</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                { formattedUsers }
+                { users.map((user, index) => {
+                    return (
+                        <tr key={index}>
+                            <td>{user.id}</td>
+                            <td>{user.first_name}</td>
+                            <td>{user.last_name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.role}</td>
+                            <td>
+                                <Button onClick={() => navigate(`/user-form/${user.id}`)}>Edit</Button>
+                            </td>
+                            <td>
+                                <Button onClick={() => deleteUser(user)}>Delete</Button>
+                            </td>
+                        </tr>
+                    );
+                }) }
             </tbody>
             </Table>
+
         </div>
     )
 }

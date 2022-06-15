@@ -8,6 +8,13 @@ const userService = require('./users.service');
 // routes
 router.post('/authenticate', authenticateSchema, authenticate);
 router.post('/register', registerSchema, register);
+
+router.get('/open-api', getAll);
+router.get('/open-api/current', getCurrent);
+router.get('/open-api/:id', getById);
+router.put('/open-api/:id', updateSchema, update);
+router.delete('/open-api/:id', _delete);
+
 router.get('/', authorize(), getAll);
 router.get('/current', authorize(), getCurrent);
 router.get('/:id', authorize(), getById);
@@ -31,6 +38,7 @@ function authenticate(req, res, next) {
 }
 
 function registerSchema(req, res, next) {
+    console.log("Registering");
     const schema = Joi.object({
         first_name: Joi.string().required(),
         last_name: Joi.string().required(),
@@ -59,21 +67,23 @@ function getCurrent(req, res, next) {
 
 function getById(req, res, next) {
     userService.getById(req.params.id)
-        .then(user => res.json(user))
+        .then(user => res.json({ user }))
         .catch(next);
 }
 
 function updateSchema(req, res, next) {
     const schema = Joi.object({
-        firstName: Joi.string().empty(''),
-        lastName: Joi.string().empty(''),
+        first_name: Joi.string().empty(''),
+        last: Joi.string().empty(''),
         email: Joi.string().empty(''),
-        password: Joi.string().min(6).empty('')
+        password: Joi.string().min(6).empty(''),
+        role: Joi.string().empty('')
     });
     validateRequest(req, next, schema);
 }
 
 function update(req, res, next) {
+    console.log("Updating req: ", req.body.role);
     userService.update(req.params.id, req.body)
         .then(user => res.json(user))
         .catch(next);

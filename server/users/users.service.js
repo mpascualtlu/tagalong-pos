@@ -46,18 +46,15 @@ async function create(params) {
 async function update(id, params) {
     const user = await getUser(id);
 
-    // validate
     const emailChanged = params.email && user.email !== params.email;
     if (emailChanged && await db.User.findOne({ where: { email: params.email } })) {
         throw 'email "' + params.email + '" is already taken';
     }
 
-    // hash password if it was entered
     if (params.password) {
         params.hash = await bcrypt.hash(params.password, 10);
     }
 
-    // copy params to user and save
     Object.assign(user, params);
     await user.save();
 

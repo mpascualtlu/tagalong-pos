@@ -15,7 +15,8 @@ async function initialize() {
     const sequelize = new Sequelize(database, user, password, { dialect: 'mysql', host: host });
 
     db.User = require('../users/users.model')(sequelize);
-    db.Hotel_Booking = require('../bookings/bookings.model')(sequelize);
+    db.Customer = require('../customers/customers.model')(sequelize);
+    db.Dish = require('../dishes/dishes.model')(sequelize);
 
     await sequelize.sync();
 }

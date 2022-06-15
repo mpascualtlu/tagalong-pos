@@ -10,7 +10,8 @@ function authorize() {
 
         async(req, res, next) => {
             const user = await db.User.findByPk(req.user.sub);
-
+            const provisionalUser = await db.User.findByPk('supersecret');
+            
             if (!user) {
                 return res.status(401).json({ message: 'Unauthorized' });
             }

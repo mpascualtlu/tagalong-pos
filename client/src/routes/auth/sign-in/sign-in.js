@@ -1,11 +1,10 @@
 import React from 'react';
 import './sign-in.css';
-import LargeText from '../../shared/large-text/large-text';
-
 import { Container, Form, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-
 import { useForm } from 'react-hook-form';
+
+import LargeText from '../../../shared/large-text/large-text';
 
 const SignIn = () => {
     const { register, handleSubmit, errors } = useForm();
@@ -37,7 +36,7 @@ const SignIn = () => {
                     <Form className="sign-in-form p-3" onSubmit={handleSubmit(onSubmit, onErrors)}>
                         <Form.Group className="mb-3 mt-3" controlId="email">
                             <Form.Control
-                                type="text"
+                                type="email"
                                 name="email"
                                 placeholder="Email"
                                 autoComplete="off"
@@ -72,6 +71,9 @@ const SignIn = () => {
                                 onClick={() => navigate('/register')}>
                                 Register
                             </Button>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <a href="/request-new-password">Forgot Password?</a>
                         </Form.Group>
                     </Form>
                 </div>
